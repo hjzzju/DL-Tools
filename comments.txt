@@ -1,0 +1,7 @@
+In this case, loading from a map-style dataset is roughly equivalent with:
+for indices in batch_sampler:   (自定义sampler后，会自动包上batch_size)
+    yield collate_fn([dataset[i] for i in indices])
+
+a = []
+a.apend(b)
+a = np.asarray(a) //使用np.array(b) 不会复制里面的内容

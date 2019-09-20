@@ -42,7 +42,7 @@ class PartialyRandomizedSimilarTimeLengthSampler(Sampler):
 
 train_loader = DataLoader(trainset, num_workers=24,
                           shuffle=False,
-                          sampler=train_sampler,
+                          sampler=train_sampler(),
                           batch_size=1,
                           pin_memory=False,
                           drop_last=False,
